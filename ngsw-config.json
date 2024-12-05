@@ -1,0 +1,56 @@
+{
+    "index": "/index.html",
+    "assetGroups": [
+      {
+        "name": "app-assets",
+        "installMode": "prefetch",
+        "resources": {
+          "files": [
+            "/favicon.ico",
+            "/assets/**",
+            "/index.html",
+            "/theme/variables.scss",
+            "/global.scss"
+          ]
+        }
+      },
+      {
+        "name": "app-headers",
+        "installMode": "lazy",
+        "resources": {
+          "urls": [
+            "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap",
+            "https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1MeV5S3M5d79g.woff2"
+          ]
+        }
+      }
+    ],
+    "dataGroups": [
+      {
+        "name": "google-books-api",
+        "urls": [
+          "https://www.googleapis.com/books/v1/**"
+        ],
+        "cacheConfig": {
+          "strategy": "performance",
+          "maxSize": 100,
+          "maxAge": "1d",
+          "timeout": "5000"
+        }
+      },
+      {
+        "name": "google-maps-api",
+        "urls": [
+          "https://maps.googleapis.com/maps/api/**",
+          "https://maps.googleapis.com/maps/v1/**"
+        ],
+        "cacheConfig": {
+          "strategy": "performance",
+          "maxSize": 100,
+          "maxAge": "1d",
+          "timeout": "5000"
+        }
+      }
+    ]
+  }
+  

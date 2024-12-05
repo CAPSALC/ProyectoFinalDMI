@@ -1,0 +1,71 @@
+/* Estilos generales para el contenedor de detalles del libro */
+ion-content {
+    --background: #f9f9f9; /* Fondo más claro para mejor contraste */
+    padding: 16px; /* Espaciado interno */
+    display: flex; /* Habilitar Flexbox para centrar el contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    height: 100%; /* Asegurar que el contenido ocupe toda la altura */
+  }
+  
+  h2 {
+    font-size: 24px; /* Tamaño de fuente más grande para el título */
+    font-weight: bold; /* Hacer el título más destacado */
+    margin-bottom: 8px; /* Espaciado inferior */
+    color: #333; /* Color de texto */
+  }
+  
+  img {
+    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 16px; /* Espaciado inferior */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+  }
+  
+  p {
+    font-size: 16px; /* Tamaño de fuente estándar */
+    line-height: 1.5; /* Altura de línea para mejorar la legibilidad */
+    margin-bottom: 10px; /* Espaciado entre párrafos */
+    color: #555; /* Color del texto para el cuerpo */
+  }
+  
+  strong {
+    color: #333; /* Color del texto en negrita */
+  }
+  
+  /* Estilo para el botón de retroceso */
+  ion-back-button {
+    color: #3880ff; /* Color del botón de retroceso */
+  }
+  
+  /* Estilo para el título del toolbar */
+  ion-toolbar {
+    background: #3880ff; /* Color de fondo del toolbar */
+    color: white; /* Color de texto del toolbar */
+  }
+  
+  /* Estilo para el texto del botón */
+  ion-button {
+    color: white; /* Color del texto del botón */
+  }
+  
+  /* Espaciado adicional al contenido para mayor separación */
+  ion-content {
+    padding: 16px; /* Agregar más espaciado para contenido */
+  }
+  
+  /* Estilos para el loader */
+  .loader {
+    text-align: center; /* Centrar contenido del loader */
+    padding: 1em; /* Espaciado interno */
+  }
+  
+  /* Centrar el loader dentro del ion-content */
+  .loader--style1 {
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    height: 100%; /* Asegurar que ocupe toda la altura del contenedor */
+  }
+  

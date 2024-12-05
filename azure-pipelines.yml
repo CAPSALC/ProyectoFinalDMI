@@ -1,0 +1,30 @@
+# Node.js with Angular
+# Build a Node.js project that uses Angular.
+# The pipeline builds the project and publishes the build artifacts.
+trigger:
+- main  # Cambia a tu rama principal si es diferente (e.g., master)
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+# Instalar Node.js
+- task: NodeTool@0
+  inputs:
+    versionSpec: '20.x'  # Cambia según la versión de Node.js compatible con tu proyecto
+  displayName: 'Install Node.js'
+
+# Instalar dependencias y construir el proyecto
+- script: |
+    npm install -g @angular/cli@16.2.5  # Cambia la versión si tu proyecto requiere otra
+    npm install
+    ng build --prod
+  displayName: 'Install dependencies and build project'
+
+# Publicar los artefactos generados para el despliegue
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: 'dist/<nombre-de-tu-aplicacion>'  # Cambia por el nombre de tu aplicación definido en angular.json
+    artifactName: 'drop'
+    publishLocation: 'Container'
+  displayName: 'Publish build artifacts'

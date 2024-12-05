@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-title>Buscar Libros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="query" placeholder="Buscar libros por título, autor, ISBN"></ion-searchbar>
+  <ion-button expand="block" (click)="search()">Buscar</ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let book of books">
+      <ion-thumbnail slot="start">
+        <img [src]="book.volumeInfo.imageLinks?.thumbnail || 'assets/placeholder.jpg'" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ book.volumeInfo.title }}</h2>
+        <p>{{ book.volumeInfo.authors?.join(', ') }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

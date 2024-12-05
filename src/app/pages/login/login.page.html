@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button> <!-- Botón de regresar al Home -->
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="login-box">
+    <h2 class="login-title">Login</h2>
+    <form>
+      <div class="user-box">
+        <input type="text" name="username" required>
+        <label>Username</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="password" required>
+        <label>Password</label>
+      </div>
+      <a href="#">Login</a>
+      <p class="register-text">
+        ¿No tienes una cuenta? <a routerLink="/register">Regístrate</a>
+      </p>
+    </form>
+  </div>
+</ion-content>
+  
